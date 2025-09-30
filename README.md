@@ -64,9 +64,10 @@ VS Code (or another code editor)
 
 Setup Instructions
 Clone the repository:
-
+```powershell
 git clone [https://github.com/sanjana-halli/resume-analyzer.git](https://github.com/sanjana-halli/resume-analyzer.git)
 cd resume-analyzer
+```
 
 Open the project in VS Code.
 
@@ -74,21 +75,29 @@ Open the integrated terminal by pressing Ctrl + ~.
 
 Create and activate a virtual environment:
 
-'''# Create the environment
-python -m venv venv'''
+```powershell
+# Create the environment
+python -m venv venv
+```
 
-'''# Activate the environment
-.\venv\Scripts\activate'''
+```powershell
+# Activate the environment
+.\venv\Scripts\activate
+```
 
 You should see (venv) at the start of your terminal prompt.
 
 Install the required packages:
 
-'''pip install -r requirements.txt'''
+```powershell
+pip install -r requirements.txt
+```
 
 Run the Flask application:
 
-'''flask run'''
+```powershell
+flask run
+```
 
 View the app by opening your web browser and navigating to:
 http://127.0.0.1:5000
