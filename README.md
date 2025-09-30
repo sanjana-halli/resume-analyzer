@@ -22,47 +22,47 @@ All processing is done locally, ensuring user privacy.
 <img src="https://github.com/user-attachments/assets/479fec74-a79d-4ce6-9264-8ed8cb94dd4b" alt="Resume Analyzer Demo" width="800"/>
 </div>
 
-✨ ## Core Features
-Flexible Input Methods: Provide your resume and job description by uploading a .pdf/.docx file or by pasting the raw text directly.
+## ✨ Core Features
+**-Flexible Input Methods:** Provide your resume and job description by uploading a .pdf/.docx file or by pasting the raw text directly.
 
-Intelligent Skill Extraction: The analyzer parses the resume to extract skills only from dedicated sections (like "Skills," "Technical Skills"), avoiding inaccurate matches from general text.
+**-Intelligent Skill Extraction:** The analyzer parses the resume to extract skills only from dedicated sections (like "Skills," "Technical Skills"), avoiding inaccurate matches from general text.
 
-Interactive Skill Confirmation: Users can review the extracted skills in a checkbox grid and deselect any that aren't relevant before the final analysis.
+**-Interactive Skill Confirmation:** Users can review the extracted skills in a checkbox grid and deselect any that aren't relevant before the final analysis.
 
-Multi-Layered Scoring: The application calculates three distinct match scores:
+**-Multi-Layered Scoring:** The application calculates three distinct match scores:
 
-vs. Job Description: A direct comparison of your skills against the specific job ad.
+**-vs. Job Description:** A direct comparison of your skills against the specific job ad.
 
-vs. Job Field: A comparison against the standard, expected skills for a selected career path (e.g., "Software Engineer," "Data Analyst").
+**-vs. Job Field:** A comparison against the standard, expected skills for a selected career path (e.g., "Software Engineer," "Data Analyst").
 
-Best Career Match: An analysis of your skills against all defined job fields to recommend the career path you are most qualified for.
+**-Best Career Match:** An analysis of your skills against all defined job fields to recommend the career path you are most qualified for.
 
-Detailed & Actionable Feedback:
+## Detailed & Actionable Feedback:
 
-Identifies "critical" missing skills by analyzing their frequency in the job description.
+-Identifies "critical" missing skills by analyzing their frequency in the job description.
 
-Provides multi-point, dynamic feedback on how to improve your alignment.
+-Provides multi-point, dynamic feedback on how to improve your alignment.
 
-Offers suggestions for online courses to fill specific skill gaps.
+-Offers suggestions for online courses to fill specific skill gaps.
 
 Includes general resume improvement tips, like quantifying achievements and using action verbs.
 
-🛠️ Tech Stack
-Backend: Python, Flask
+## 🛠️ Tech Stack
 
-Frontend: HTML, CSS, Vanilla JavaScript
+**-Backend:** Python, Flask
 
-File Parsing: python-docx, PyMuPDF
+**-Frontend:** HTML, CSS, Vanilla JavaScript
 
-🚀 Running the Project Locally
+**-File Parsing:** python-docx, PyMuPDF
+
+## 🚀 Running the Project Locally
 Follow these steps to get the application running on your local machine.
 
-Prerequisites
-Python (3.9+ recommended)
+## Prerequisites
+-Python (3.9+ recommended)
+-VS Code (or another code editor)
 
-VS Code (or another code editor)
-
-Setup Instructions
+## Setup Instructions
 Clone the repository:
 ```powershell
 git clone [https://github.com/sanjana-halli/resume-analyzer.git](https://github.com/sanjana-halli/resume-analyzer.git)
