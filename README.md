@@ -23,13 +23,13 @@ All processing is done locally, ensuring user privacy.
 </div>
 
 ## ✨ Core Features
-**- Flexible Input Methods:** Provide your resume and job description by uploading a .pdf/.docx file or by pasting the raw text directly.
+- **Flexible Input Methods:** Provide your resume and job description by uploading a .pdf/.docx file or by pasting the raw text directly.
 
-**- Intelligent Skill Extraction:** The analyzer parses the resume to extract skills only from dedicated sections (like "Skills," "Technical Skills"), avoiding inaccurate matches from general text.
+- **Intelligent Skill Extraction:** The analyzer parses the resume to extract skills only from dedicated sections (like "Skills," "Technical Skills"), avoiding inaccurate matches from general text.
 
-**- Interactive Skill Confirmation:** Users can review the extracted skills in a checkbox grid and deselect any that aren't relevant before the final analysis.
+- **Interactive Skill Confirmation:** Users can review the extracted skills in a checkbox grid and deselect any that aren't relevant before the final analysis.
 
-**- Multi-Layered Scoring:** The application calculates three distinct match scores:
+- **Multi-Layered Scoring:** The application calculates three distinct match scores:
 
     **1. vs. Job Description:** A direct comparison of your skills against the specific job ad.
 
