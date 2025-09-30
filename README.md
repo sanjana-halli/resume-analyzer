@@ -7,10 +7,10 @@
 <h1 align="center">Resume Analyzer 📁✨</h1>
 
 <div align="center">
-<!-- Badges - Replace placeholders with your own -->
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg" alt="Python 3.9+">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Framework-Flask-orange.svg" alt="Framework: Flask">
+<!-- Badges - Corrected URLs -->
+<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+<img src="https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg" alt="Python 3.9+">
+<img src="https://img.shields.io/badge/Framework-Flask-orange.svg" alt="Framework: Flask">
 </div>
 
 Resume Analyzer is a comprehensive, full-stack web application designed to intelligently score a resume against a job description. Built with a robust Python Flask backend and a dynamic vanilla JavaScript frontend, this tool provides a multi-dimensional analysis to help users understand their job application readiness.
@@ -19,7 +19,7 @@ All processing is done locally, ensuring user privacy.
 
 <div align="center">
 <h3>Application Demo</h3>
-<img src="![Image](https://github.com/user-attachments/assets/479fec74-a79d-4ce6-9264-8ed8cb94dd4b)" alt="Resume Analyzer Demo" width="800"/>
+<img src="https://github.com/user-attachments/assets/479fec74-a79d-4ce6-9264-8ed8cb94dd4b" alt="Resume Analyzer Demo" width="800"/>
 </div>
 
 ✨ Core Features
@@ -74,21 +74,21 @@ Open the integrated terminal by pressing Ctrl + ~.
 
 Create and activate a virtual environment:
 
-# Create the environment
-python -m venv venv
+'''# Create the environment
+python -m venv venv'''
 
-# Activate the environment
-.\venv\Scripts\activate
+'''# Activate the environment
+.\venv\Scripts\activate'''
 
 You should see (venv) at the start of your terminal prompt.
 
 Install the required packages:
 
-pip install -r requirements.txt
+'''pip install -r requirements.txt'''
 
 Run the Flask application:
 
-flask run
+'''flask run'''
 
 View the app by opening your web browser and navigating to:
 http://127.0.0.1:5000
