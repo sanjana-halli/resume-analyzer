@@ -31,38 +31,38 @@ All processing is done locally, ensuring user privacy.
 
 **-Multi-Layered Scoring:** The application calculates three distinct match scores:
 
-**-vs. Job Description:** A direct comparison of your skills against the specific job ad.
+  **1. vs. Job Description:** A direct comparison of your skills against the specific job ad.
 
-**-vs. Job Field:** A comparison against the standard, expected skills for a selected career path (e.g., "Software Engineer," "Data Analyst").
+  **2. vs. Job Field:** A comparison against the standard, expected skills for a selected career path (e.g., "Software Engineer," "Data Analyst").
 
-**-Best Career Match:** An analysis of your skills against all defined job fields to recommend the career path you are most qualified for.
+  **3. Best Career Match:** An analysis of your skills against all defined job fields to recommend the career path you are most qualified for.
 
 ## Detailed & Actionable Feedback:
 
--Identifies "critical" missing skills by analyzing their frequency in the job description.
+- Identifies "critical" missing skills by analyzing their frequency in the job description.
 
--Provides multi-point, dynamic feedback on how to improve your alignment.
+- Provides multi-point, dynamic feedback on how to improve your alignment.
 
--Offers suggestions for online courses to fill specific skill gaps.
+- Offers suggestions for online courses to fill specific skill gaps.
 
-Includes general resume improvement tips, like quantifying achievements and using action verbs.
+- Includes general resume improvement tips, like quantifying achievements and using action verbs.
 
 ## 🛠️ Tech Stack
 
-**-Backend:** Python, Flask
+**- Backend:** Python, Flask
 
-**-Frontend:** HTML, CSS, Vanilla JavaScript
+**- Frontend:** HTML, CSS, Vanilla JavaScript
 
-**-File Parsing:** python-docx, PyMuPDF
+**- File Parsing:** python-docx, PyMuPDF
 
 ## 🚀 Running the Project Locally
 Follow these steps to get the application running on your local machine.
 
-## Prerequisites
--Python (3.9+ recommended)
--VS Code (or another code editor)
+### Prerequisites
+- Python (3.9+ recommended)
+- VS Code (or another code editor)
 
-## Setup Instructions
+### Setup Instructions
 Clone the repository:
 ```powershell
 git clone [https://github.com/sanjana-halli/resume-analyzer.git](https://github.com/sanjana-halli/resume-analyzer.git)
@@ -102,10 +102,10 @@ flask run
 View the app by opening your web browser and navigating to:
 http://127.0.0.1:5000
 
-✍️ Authors
+## ✍️ Authors
 This project was created by:
 
 Sanjana Halli - https://github.com/sanjana-halli
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
