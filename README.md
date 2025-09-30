@@ -23,21 +23,21 @@ All processing is done locally, ensuring user privacy.
 </div>
 
 ## ✨ Core Features
-**-Flexible Input Methods:** Provide your resume and job description by uploading a .pdf/.docx file or by pasting the raw text directly.
+**- Flexible Input Methods:** Provide your resume and job description by uploading a .pdf/.docx file or by pasting the raw text directly.
 
-**-Intelligent Skill Extraction:** The analyzer parses the resume to extract skills only from dedicated sections (like "Skills," "Technical Skills"), avoiding inaccurate matches from general text.
+**- Intelligent Skill Extraction:** The analyzer parses the resume to extract skills only from dedicated sections (like "Skills," "Technical Skills"), avoiding inaccurate matches from general text.
 
-**-Interactive Skill Confirmation:** Users can review the extracted skills in a checkbox grid and deselect any that aren't relevant before the final analysis.
+**- Interactive Skill Confirmation:** Users can review the extracted skills in a checkbox grid and deselect any that aren't relevant before the final analysis.
 
-**-Multi-Layered Scoring:** The application calculates three distinct match scores:
+**- Multi-Layered Scoring:** The application calculates three distinct match scores:
 
-  **1. vs. Job Description:** A direct comparison of your skills against the specific job ad.
+    **1. vs. Job Description:** A direct comparison of your skills against the specific job ad.
 
-  **2. vs. Job Field:** A comparison against the standard, expected skills for a selected career path (e.g., "Software Engineer," "Data Analyst").
+    **2. vs. Job Field:** A comparison against the standard, expected skills for a selected career path (e.g., "Software Engineer," "Data Analyst").
 
-  **3. Best Career Match:** An analysis of your skills against all defined job fields to recommend the career path you are most qualified for.
+    **3. Best Career Match:** An analysis of your skills against all defined job fields to recommend the career path you are most qualified for.
 
-## Detailed & Actionable Feedback:
+### Detailed & Actionable Feedback:
 
 - Identifies "critical" missing skills by analyzing their frequency in the job description.
 
@@ -46,6 +46,7 @@ All processing is done locally, ensuring user privacy.
 - Offers suggestions for online courses to fill specific skill gaps.
 
 - Includes general resume improvement tips, like quantifying achievements and using action verbs.
+  
 
 ## 🛠️ Tech Stack
 
@@ -55,25 +56,28 @@ All processing is done locally, ensuring user privacy.
 
 **- File Parsing:** python-docx, PyMuPDF
 
+
 ## 🚀 Running the Project Locally
 Follow these steps to get the application running on your local machine.
+
 
 ### Prerequisites
 - Python (3.9+ recommended)
 - VS Code (or another code editor)
 
+
 ### Setup Instructions
-Clone the repository:
+1. Clone the repository:
 ```powershell
 git clone [https://github.com/sanjana-halli/resume-analyzer.git](https://github.com/sanjana-halli/resume-analyzer.git)
 cd resume-analyzer
 ```
 
-Open the project in VS Code.
+2. Open the project in VS Code.
 
-Open the integrated terminal by pressing Ctrl + ~.
+3. Open the integrated terminal by pressing Ctrl + ~.
 
-Create and activate a virtual environment:
+4. Create and activate a virtual environment:
 
 ```powershell
 # Create the environment
@@ -87,19 +91,19 @@ python -m venv venv
 
 You should see (venv) at the start of your terminal prompt.
 
-Install the required packages:
+5. Install the required packages:
 
 ```powershell
 pip install -r requirements.txt
 ```
 
-Run the Flask application:
+6. Run the Flask application:
 
 ```powershell
 flask run
 ```
 
-View the app by opening your web browser and navigating to:
+7. View the app by opening your web browser and navigating to:
 http://127.0.0.1:5000
 
 ## ✍️ Authors
