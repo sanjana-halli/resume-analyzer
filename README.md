@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/41d4fd42-ac80-444f-b649-9db0784daaeb" alt="Resume Analyzer Banner" width="800"/>
 </div>
 
-<h1 align="center">Resume Analyzer 📁✨</h1>
+<h1 align="center">**Resume Analyzer** 📁✨</h1>
 
 <div align="center">
 <!-- Badges - Corrected URLs -->
