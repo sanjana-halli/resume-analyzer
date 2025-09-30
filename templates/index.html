@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibesume :: Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Resume Analyzer 📁✨</h1>
+            <p>Get a multi-dimensional analysis of your resume against job roles.</p>
+        </header>
+
+        <section class="card-container">
+            <form id="analyzer-form">
+                <div class="input-grid">
+                    <!-- Resume Card -->
+                    <div class="card">
+                        <h2>Your Resume</h2>
+                        <div class="input-tabs">
+                            <button type="button" class="tab-btn active" data-for="resume" data-type="file">Upload File</button>
+                            <button type="button" class="tab-btn" data-for="resume" data-type="text">Paste Text</button>
+                        </div>
+                        <div class="input-content" id="resume-file-content">
+                            <p>Upload a .pdf or .docx file.</p>
+                            <input type="file" id="resume-file-input" name="resume_file" accept=".pdf,.docx">
+                            <label for="resume-file-input" class="file-label"><span data-for="resume_file">📄 Choose a file...</span></label>
+                        </div>
+                        <div class="input-content hidden" id="resume-text-content">
+                            <p>Paste the full resume text.</p>
+                            <textarea name="resume_text" rows="8" placeholder="Paste resume text here..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Job Description Card -->
+                    <div class="card">
+                        <h2>The Job</h2>
+                         <!-- NEW: Job Field Dropdown -->
+                        <div class="form-group">
+                            <label for="job-field-select">Target Job Field</label>
+                            <select name="job_field" id="job-field-select" class="job-field-select" required>
+                                <option value="" disabled selected>Select a job field...</option>
+                                {% for field in job_fields %}
+                                    <option value="{{ field }}">{{ field }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="input-tabs">
+                            <button type="button" class="tab-btn active" data-for="jd" data-type="file">Upload JD File</button>
+                            <button type="button" class="tab-btn" data-for="jd" data-type="text">Paste JD Text</button>
+                        </div>
+                        <div class="input-content" id="jd-file-content">
+                            <p>Upload a .pdf or .docx file.</p>
+                            <input type="file" id="jd-file-input" name="jd_file" accept=".pdf,.docx">
+                            <label for="jd-file-input" class="file-label"><span data-for="jd_file">📄 Choose a file...</span></label>
+                        </div>
+                        <div class="input-content hidden" id="jd-text-content">
+                            <p>Paste the full job description.</p>
+                            <textarea name="jd_text" rows="8" placeholder="Paste job description here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="extract-btn">Extract Skills</button>
+            </form>
+
+            <div id="skill-confirmation-section" class="card hidden">
+                <h2>Confirm Your Skills</h2>
+                <p>Uncheck any skills that aren't relevant.</p>
+                <div id="skill-checkboxes" class="checkbox-container"></div>
+                <button id="analyze-btn" class="hidden">Analyze Match</button>
+            </div>
+        </section>
+
+        <!-- NEW: Restructured Results Section -->
+        <section id="results-section" class="hidden">
+            <h2>Analysis Report</h2>
+            <div class="analysis-comparison-grid">
+                <!-- Box 1: Match vs Job Description -->
+                <div class="card analysis-result-box">
+                    <h3>Match vs. Job Description</h3>
+                    <div class="score-circle" id="jd-score-circle"><span id="jd-score-value">0%</span></div>
+                    <div class="skills-list">
+                        <h4>✅ Matched Skills</h4>
+                        <div id="jd-matched-skills" class="tags-container"></div>
+                    </div>
+                     <div class="skills-list">
+                        <h4>❌ Missing Skills</h4>
+                        <div id="jd-missing-skills" class="tags-container"></div>
+                    </div>
+                </div>
+                <!-- Box 2: Match vs Selected Field -->
+                <div class="card analysis-result-box">
+                    <h3>Match vs. <span id="field-name-title">Job Field</span></h3>
+                    <div class="score-circle" id="field-score-circle"><span id="field-score-value">0%</span></div>
+                     <div class="skills-list">
+                        <h4>✅ Matched Skills</h4>
+                        <div id="field-matched-skills" class="tags-container"></div>
+                    </div>
+                     <div class="skills-list">
+                        <h4>❌ Missing Skills</h4>
+                        <div id="field-missing-skills" class="tags-container"></div>
+                    </div>
+                </div>
+                <!-- Box 3: Best Career Match -->
+                 <div class="card analysis-result-box">
+                    <h3>Your Best Career Match</h3>
+                    <div class="score-circle" id="best-match-score-circle"><span id="best-match-score-value">0%</span></div>
+                    <h4 id="best-match-field-name" class="best-match-title">N/A</h4>
+                    <p class="best-match-subtitle">This is the career path your current skills align with most strongly from our database.</p>
+                </div>
+            </div>
+
+            <div class="card result-card hidden" id="feedback-section">
+                <h3>💡 Quick Feedback</h3>
+                <div id="feedback-text"></div>
+            </div>
+
+            <div id="suggestions-section" class="card result-card hidden">
+                <h2>Additional Suggestions</h2>
+                <div id="course-suggestions">
+                    <h3>🎓 Recommended Courses to Fill Gaps</h3>
+                    <div id="course-list"></div>
+                </div>
+                <div id="general-tips-suggestions">
+                     <h3>✍️ General Resume Tips</h3>
+                    <ul id="general-tips-list"></ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
