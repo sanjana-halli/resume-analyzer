@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/41d4fd42-ac80-444f-b649-9db0784daaeb" alt="Resume Analyzer Banner" width="800"/>
 </div>
 
-<h1 align="center">**Resume Analyzer** 📁✨</h1>
+<h1 align="center"> Resume Analyzer 📁✨</h1>
 
 <div align="center">
 <!-- Badges - Corrected URLs -->
@@ -22,7 +22,7 @@ All processing is done locally, ensuring user privacy.
 <img src="https://github.com/user-attachments/assets/479fec74-a79d-4ce6-9264-8ed8cb94dd4b" alt="Resume Analyzer Demo" width="800"/>
 </div>
 
-✨ Core Features
+✨ ## Core Features
 Flexible Input Methods: Provide your resume and job description by uploading a .pdf/.docx file or by pasting the raw text directly.
 
 Intelligent Skill Extraction: The analyzer parses the resume to extract skills only from dedicated sections (like "Skills," "Technical Skills"), avoiding inaccurate matches from general text.
